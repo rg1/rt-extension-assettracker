@@ -8,8 +8,6 @@ my $query_string = sub {
     return $u->query;
 };
 
-warn keys %session;
-
 my $assets;
 eval {
     $assets = Menu->child(  assets => title => loc('Assets'), path => '/AssetTracker/index.html', sort_order => 3 );
