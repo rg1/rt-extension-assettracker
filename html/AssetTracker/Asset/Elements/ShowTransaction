@@ -60,6 +60,9 @@
 % $m->callback( text => \$desc, Transaction => $Transaction, %ARGS, CallbackName => 'ModifyDisplay' );
     <td class="description">
       <% $Transaction->CreatorObj->Name %> - <% $AssetString %> <% $desc %>
+% if ($Transaction->Data) {
+<br /><font size=-2><em><% $Transaction->Data %></em></font>
+% }
     </td>
     <td class="time-taken"><% $TimeTaken %></td>
     <td class="actions<% $titlebar_commands ? '': ' hidden'%>"><% $titlebar_commands |n %></td>
